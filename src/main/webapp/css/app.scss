@@ -1,0 +1,89 @@
+
+$card-padding : 0.8em;
+$card-inner-padding: 0.2em;
+
+body {
+    background-color: #e3e3e3;
+}
+
+nav {
+
+    &.bg-light {
+        background-color: transparent !important;
+
+        border-bottom: solid 3px #aaaaaa;
+    }
+}
+
+div.item {
+
+    padding-top: $card-padding;
+    padding-left: $card-padding;
+    padding-right: $card-padding;
+    width: 100%;
+
+    div.view {
+        border-radius: 2px;
+        border: none;
+        box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+        background-color: white;
+
+        &:before {
+            content: "";
+            display: block;
+            padding-top: 100%;
+        }
+
+        .content {
+            position: absolute;
+            top: $card-padding + $card-inner-padding;
+            left: $card-padding + $card-inner-padding;;
+            bottom: $card-padding + $card-inner-padding;;
+            right: $card-padding + $card-inner-padding;;
+        }
+        
+        h2 {
+            width: calc(100% - #{$card-padding});
+            height: 25%;
+            position: absolute;
+            bottom: 0;
+
+            background-color: gray;
+            
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-right: 0;
+
+            padding-top: 0;
+            padding-left: 0.5em;
+
+            display: flex;
+            // justify-content: center;
+            align-items: center;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+        }
+    }
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.input-fields {
+    .row {
+        margin-top: 2em;
+    }
+}
