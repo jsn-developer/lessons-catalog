@@ -1,5 +1,6 @@
 package jp.co.solxyz.lessons.catalog.business;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -13,9 +14,15 @@ public class GoodsService {
 	 * @return リスト
 	 */
 	public List<GoodsEntity> getAllGoods() {
+		List<GoodsEntity> ret = new ArrayList<GoodsEntity>();
 
+		var goods = new GoodsEntity();
+		goods.setId("id");
+		goods.setName("name");
 
-		return null;
+		ret.add(goods);
+
+		return ret;
 	}
 
 

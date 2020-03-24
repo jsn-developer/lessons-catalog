@@ -10,7 +10,12 @@
   	<description>リスト</description>
   	<servlet-class>jp.co.solxyz.lessons.catalog.ListServlet</servlet-class>
   </servlet>
-
+	<jsp-config>
+	<jsp-property-group>
+		<url-pattern>*.jsp</url-pattern>
+		<page-encoding>UTF-8</page-encoding>
+	</jsp-property-group>
+	</jsp-config>
   <servlet-mapping>
   	<servlet-name>ListServlet</servlet-name>
   	<url-pattern>/list</url-pattern>
