@@ -12,6 +12,11 @@ import lombok.Data;
 @Data
 public class GoodsEntity implements Serializable{
 
+	/**
+	 * Serial UID
+	 */
+	private static final long serialVersionUID = 9008599713947157456L;
+
 	/** 固有ID */
 	private String id;
 

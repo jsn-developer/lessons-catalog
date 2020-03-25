@@ -9,15 +9,36 @@
   	<display-name>ListServlet</display-name>
   	<description>リスト</description>
   	<servlet-class>jp.co.solxyz.lessons.catalog.ListServlet</servlet-class>
-  </servlet>
+</servlet>
+<servlet>
+  	<servlet-name>DetailServlet</servlet-name>
+  	<display-name>DetailServlet</display-name>
+  	<description>詳細</description>
+  	<servlet-class>jp.co.solxyz.lessons.catalog.DetailServlet</servlet-class>
+</servlet>
+<servlet>
+  	<servlet-name>InquiryServlet</servlet-name>
+  	<display-name>InquiryServlet</display-name>
+  	<description>問い合わせ</description>
+  	<servlet-class>jp.co.solxyz.lessons.catalog.InquiryServlet</servlet-class>
+</servlet>
 	<jsp-config>
 	<jsp-property-group>
 		<url-pattern>*.jsp</url-pattern>
 		<page-encoding>UTF-8</page-encoding>
 	</jsp-property-group>
-	</jsp-config>
+  </jsp-config>
+
   <servlet-mapping>
   	<servlet-name>ListServlet</servlet-name>
   	<url-pattern>/list</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+	<servlet-name>DetailServlet</servlet-name>
+	<url-pattern>/detail</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+	<servlet-name>InquiryServlet</servlet-name>
+	<url-pattern>/inquiry</url-pattern>
   </servlet-mapping>
 </web-app>

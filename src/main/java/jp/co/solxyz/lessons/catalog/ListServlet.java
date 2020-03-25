@@ -10,8 +10,12 @@ import javax.servlet.http.HttpServletResponse;
 
 public class ListServlet extends HttpServlet{
 
-	private static final String path = "/WEB-INF/jsp/list.jsp";
-
+	/**
+	 * Serial Versiion UID
+	 */
+	private static final long serialVersionUID = 4936832954865854271L;
+	
+	private static final String PATH = "/WEB-INF/jsp/list.jsp";
 
 	/**
 	 * Get Request
@@ -21,7 +25,7 @@ public class ListServlet extends HttpServlet{
 
 
 		// 遷移先を指定
-		RequestDispatcher dispatcher = req.getRequestDispatcher(path);
+		RequestDispatcher dispatcher = req.getRequestDispatcher(PATH);
 		dispatcher.forward(req, resp);
 	}
 

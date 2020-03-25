@@ -1,3 +1,4 @@
+<%@ page pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +33,7 @@
 
         <div class="row">
             <div class="col-xs-12 col-sm-12 center">
-                <button class="btn btn-success" onclick="location.href='inquiry.html'">この商品について問い合わせる</button>
+                <button class="btn btn-success" onclick="location.href='./inquiry'">この商品について問い合わせる</button>
             </div>
         </div>
     </div>

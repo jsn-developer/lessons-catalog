@@ -28,7 +28,7 @@
             for(let i = 0; i < 13; i++) {
                 _row.append(`
                     <div class="col-md-4 col-sm-6 col-xs-12 item">
-                        <div class="view" style="background-image:url(${"./image.png"})" onClick="location.href='detail.html'">
+                        <div class="view" style="background-image:url(${"./image.png"})" onClick="location.href='./detail'">
                             
                             <h2>Card ${i + 1} xxxxxxxxxxxxxxxxxxxxxxx</h2>
                             <div class="content">

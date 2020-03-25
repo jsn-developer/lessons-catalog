@@ -13,7 +13,8 @@
         "files.insertFinalNewline": true,
         "files.trimFinalNewlines": true,
         "editor.tabSize": 4,
-        "java.saveActions.organizeImports": true
+        "java.saveActions.organizeImports": true,
+        "tomcat.workspace": "/opt/tomcat"
     },
 
     "extensions": [

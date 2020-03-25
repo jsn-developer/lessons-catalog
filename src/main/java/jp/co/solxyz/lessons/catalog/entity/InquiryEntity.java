@@ -12,6 +12,10 @@ import lombok.Data;
 @Data
 public class InquiryEntity implements Serializable{
 
+	/**
+	 * Serial UID
+	 */
+	private static final long serialVersionUID = -756435552638981666L;
 
 	private String id;
 
