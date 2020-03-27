@@ -2,6 +2,7 @@ package jp.co.solxyz.lessons.catalog.business;
 
 import java.util.List;
 
+import jp.co.solxyz.lessons.catalog.dao.DataDao;
 import jp.co.solxyz.lessons.catalog.entity.InquiryEntity;
 
 public class InquiryService {
@@ -27,9 +28,14 @@ public class InquiryService {
 
 	/**
 	 * 問い合わせ情報の登録
-	 * @param entity 登録する問い合わせのEntity情報
+	 * 
+	 * @param entity
+	 *                   登録する問い合わせのEntity情報
+	 * @throws Exception
 	 */
-	public void registerInquiry (InquiryEntity entity) {
+	public int registerInquiry(InquiryEntity entity) throws Exception {
 
+		DataDao dao = new DataDao();
+		return dao.insert(entity);
 	}
 }

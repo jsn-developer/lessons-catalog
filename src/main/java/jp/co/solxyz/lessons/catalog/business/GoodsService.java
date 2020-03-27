@@ -1,9 +1,9 @@
 package jp.co.solxyz.lessons.catalog.business;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import jp.co.solxyz.lessons.catalog.dao.DataDao;
 import jp.co.solxyz.lessons.catalog.entity.GoodsEntity;
 
 public class GoodsService {
@@ -13,16 +13,10 @@ public class GoodsService {
 	 * 全ての商品情報を取得
 	 * @return リスト
 	 */
-	public List<GoodsEntity> getAllGoods() {
-		List<GoodsEntity> ret = new ArrayList<GoodsEntity>();
+	public List<GoodsEntity> getAllGoods() throws Exception{
 
-		var goods = new GoodsEntity();
-		goods.setId("id");
-		goods.setName("name");
-
-		ret.add(goods);
-
-		return ret;
+		DataDao dao = new DataDao();
+		return dao.select("select * from goods");
 	}
 
 
@@ -31,8 +25,11 @@ public class GoodsService {
 	 * @param id 商品ID
 	 * @return 商品情報
 	 */
-	public Optional<GoodsEntity> getGoodsFromId(String id) {
+	public Optional<GoodsEntity> getGoodsFromId(String id) throws Exception{
 
-		return null;
+		DataDao dao = new DataDao();
+
+		var ret = dao.select("select * from goods where id = " + id);
+		return Optional.of(ret.isEmpty() ? null : ret.get(0));
 	}
 }

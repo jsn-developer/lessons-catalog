@@ -1,7 +1,7 @@
 #!/bin/sh
 /opt/tomcat/bin/catalina.sh stop
 
-mvn package
+mvn package -DskipTests=true
 
 rm -rf /opt/tomcat/webapps/*
 

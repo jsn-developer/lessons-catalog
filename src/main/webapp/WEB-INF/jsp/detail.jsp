@@ -24,8 +24,8 @@
 
             <div class="col-xs-12 col-sm-6 col-md-8">
                 <div style="height: 1em;"></div>
-                <h2>商品名</h2>
-                <p>ここに商品の名称などがはいるよ</p>
+                <h2><%= request.getAttribute("name") %></h2>
+                <p><%= request.getAttribute("description") %></p>
             </div>
         </div>
         
@@ -33,7 +33,7 @@
 
         <div class="row">
             <div class="col-xs-12 col-sm-12 center">
-                <button class="btn btn-success" onclick="location.href='./inquiry'">この商品について問い合わせる</button>
+                <button class="btn btn-success" onclick="location.href='./inquiry?id=<%= request.getAttribute("id") %>'">この商品について問い合わせる</button>
             </div>
         </div>
     </div>

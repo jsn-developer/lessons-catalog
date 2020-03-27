@@ -17,7 +17,9 @@ public class InquiryEntity implements Serializable{
 	 */
 	private static final long serialVersionUID = -756435552638981666L;
 
-	private String id;
+	private int id;
+
+	private int goodsid;
 
 	private String name;
 

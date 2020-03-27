@@ -18,7 +18,7 @@ public class GoodsEntity implements Serializable{
 	private static final long serialVersionUID = 9008599713947157456L;
 
 	/** 固有ID */
-	private String id;
+	private int id;
 
 	/** 商品名 */
 	private String name;
@@ -30,5 +30,7 @@ public class GoodsEntity implements Serializable{
 	private long price;
 
 	/** メイン画像のURL */
-	private String photo;
+	private byte[] photo;
+
+	private String mime;
 }

@@ -1,15 +1,13 @@
 package jp.co.solxyz.lessons.catalog.business;
 
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.fail;
 
 import java.util.List;
 
 import org.junit.Test;
 
 import jp.co.solxyz.lessons.catalog.entity.GoodsEntity;
-
-
-
 
 public class GoodsServiceTest {
 
@@ -18,9 +16,14 @@ public class GoodsServiceTest {
     @Test
     public void testGetAllGoods() {
 
-        List<GoodsEntity> list = target.getAllGoods();
+        List<GoodsEntity> list;
 
-        assertNotNull(list);
-
+        try {
+            list = target.getAllGoods();
+            assertNotNull(list);
+        } catch (Exception e) {
+            e.printStackTrace();
+            fail();
+        }
     }
 }

@@ -1,6 +1,8 @@
 <html>
 <body>
-<h2>Hello World!</h2>
-<h3>Sub title.</h3>
+<h2>Welcome to catalog site!</h2>
+
+<a href="list">はじめる</a>
+
 </body>
 </html>
